@@ -20,7 +20,7 @@ namespace GestaoCondominios.DAL.Mapeamentos
             builder.Property(u => u.Status).IsRequired();
 
             // um proprietario pode ter um ou mais apartamentos
-            builder.HasMany(u => u.PropriatariosApartamentos).WithOne(u => u.Propriatario);
+            builder.HasMany(u => u.ProprietariosApartamentos).WithOne(u => u.Proprietario);
             // um apartamento pode ter um morador, mas um morador pode ter varios apartamentos em seu nome alugados
             builder.HasMany(u => u.MoradoresApartamentos).WithOne(u => u.Morador);
             // um user pode ter varios veiculos, mas aquele veiculo pode estar vinculado apenas a um user

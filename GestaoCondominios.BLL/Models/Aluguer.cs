@@ -20,6 +20,6 @@ namespace GestaoCondominios.BLL.Models
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [Range(2020, 2030, ErrorMessage = "Valor inválido")]
         public int Ano { get; set; }
-        public virtual ICollection<Pagamento> Pagamento { get; set; }
+        public virtual ICollection<Pagamento> Pagamentos { get; set; }
     }
 }

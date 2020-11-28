@@ -23,7 +23,7 @@ namespace GestaoCondominios.BLL.Models
         public int MoradorId { get; set; }
         // para mapear com a classe Utilizador
         public virtual Utilizador Morador { get; set; } // o morador e o propriatario é o proprio utilizador
-        public int PropriatarioId { get; set; }
-        public Utilizador Propriatario { get; set; }
+        public int ProprietarioId { get; set; }
+        public Utilizador Proprietario { get; set; }
     }
 }

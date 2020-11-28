@@ -13,7 +13,7 @@ namespace GestaoCondominios.BLL.Models
         public StatusConta Status { get; set; } // para definir se o utilizador foi aprovado ou rejeitado na plataforma
 
         public virtual ICollection<Apartamento> MoradoresApartamentos { get; set; }
-        public virtual ICollection<Apartamento> PropriatariosApartamentos { get; set; }
+        public virtual ICollection<Apartamento> ProprietariosApartamentos { get; set; }
         public virtual ICollection<Veiculo> Veiculos { get; set; }
         public virtual ICollection<Evento> Eventos { get; set; }
         public virtual ICollection<Servico> Servicos { get; set; }
