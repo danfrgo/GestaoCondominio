@@ -13,7 +13,7 @@ namespace GestaoCondominios.DAL.Mapeamentos
         {
             // .Property -> para acessar uma propiedade
             builder.Property(f => f.Id).ValueGeneratedOnAdd();
-            builder.Property(f => f.Descricao).IsRequired().HasMaxLength(30)
+            builder.Property(f => f.Descricao).IsRequired().HasMaxLength(30);
         }
     }
 }
