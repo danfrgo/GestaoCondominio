@@ -20,10 +20,10 @@ namespace GestaoCondominios.BLL.Models
         public string Foto { get; set; } //na BD vai ser apenas guardada a URL da foto para evitar a sobrecarga de ter varias fotos
 
         // Chave estrangeira
-        public int MoradorId { get; set; }
+        public string MoradorId { get; set; }
         // para mapear com a classe Utilizador
         public virtual Utilizador Morador { get; set; } // o morador e o propriatario é o proprio utilizador
-        public int ProprietarioId { get; set; }
+        public string ProprietarioId { get; set; }
         public Utilizador Proprietario { get; set; }
     }
 }

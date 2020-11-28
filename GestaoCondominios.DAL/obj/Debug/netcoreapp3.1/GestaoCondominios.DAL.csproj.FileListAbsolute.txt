@@ -1,4 +1,15 @@
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.deps.json
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.runtimeconfig.json
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.runtimeconfig.dev.json
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.dll
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.dll
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csprojAssemblyReference.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.AssemblyInfoInputs.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.AssemblyInfo.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csproj.CopyComplete
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.dll
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.pdb
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.genruntimeconfig.cache

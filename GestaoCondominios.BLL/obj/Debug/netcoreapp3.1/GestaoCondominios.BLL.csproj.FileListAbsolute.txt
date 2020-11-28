@@ -1,5 +1,8 @@
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.deps.json
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.dll
-C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.csprojAssemblyReference.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.AssemblyInfoInputs.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.AssemblyInfo.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.dll
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.pdb

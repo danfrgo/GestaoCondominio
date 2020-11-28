@@ -16,11 +16,11 @@ namespace GestaoCondominios.DAL.Mapeamentos
             builder.Property(a => a.Andar).IsRequired();
             builder.Property(a => a.Foto).IsRequired();
             builder.Property(a => a.ProprietarioId).IsRequired();
-            builder.Property(a => a.MoradorId).IsRequired();
+            builder.Property(a => a.MoradorId).IsRequired(false); // o morador nao é obrigatorio pois o apartamento pode estar vago
 
             // relacionamento de apartamento com proprietarios
-            builder.HasOne(a => a.Proprietario).WithMany(a => a.ProprietariosApartamentos).HasForeignKey(a => a.ProprietarioId);
-            builder.HasOne(a => a.Morador).WithMany(a => a.MoradoresApartamentos).HasForeignKey(a => a.MoradorId);
+            builder.HasOne(a => a.Proprietario).WithMany(a => a.ProprietariosApartamentos).HasForeignKey(a => a.ProprietarioId).OnDelete(DeleteBehavior.NoAction); // DeleteBehavior -> quando exluirmos um registo nao vai influenciar no outro
+            builder.HasOne(a => a.Morador).WithMany(a => a.MoradoresApartamentos).HasForeignKey(a => a.MoradorId).OnDelete(DeleteBehavior.NoAction);
 
             builder.ToTable("Apartamentos");
         }
