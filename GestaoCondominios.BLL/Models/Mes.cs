@@ -9,6 +9,6 @@ namespace GestaoCondominios.BLL.Models
         public int MesId { get; set; }
         public string Nome { get; set; }
         public virtual ICollection<Aluguer> Algueres { get; set; }
-        public virtual ICollection<HistoricoRecurso> HistoricoRecursos { get; set; }
+        public virtual ICollection<HistoricoRecursos> HistoricoRecursos { get; set; }
     }
 }
