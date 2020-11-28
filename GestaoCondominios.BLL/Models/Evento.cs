@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GestaoCondominios.BLL.Models
 {
-    class Evento
+    public class Evento
     {
         public int EventoId { get; set; }
 
