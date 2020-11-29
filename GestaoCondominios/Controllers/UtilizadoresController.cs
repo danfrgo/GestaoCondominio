@@ -116,6 +116,11 @@ namespace GestaoCondominios.Controllers
            return View();
         }
 
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         public IActionResult Analise(string nome)
         {
             return View(nome);
