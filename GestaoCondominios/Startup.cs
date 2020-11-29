@@ -3,6 +3,7 @@ using GestaoCondominios.BLL.Models;
 using GestaoCondominios.DAL;
 using GestaoCondominios.DAL.Interface;
 using GestaoCondominios.DAL.Repositorios;
+using GestaoCondominios.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,12 @@ namespace GestaoCondominios
             services.AddAuthentication();
             services.AddAuthorization();
 
-            services.AddTransient<IUtilizadorRepositorio, UtilizadorRepositorio>(); // para utilizador o UtilizadorRepositorio
+            //services.AddTransient<IUtilizadorRepositorio, UtilizadorRepositorio>(); // para utilizador o UtilizadorRepositorio
+
+            services.ConfigurarRepositorios();
+            services.ConfigurarCookies();
+            services.ConfigurarNomeUtilizador();
+            services.ConfigurarPasswordUtilizador();
 
 
             services.AddControllersWithViews();
