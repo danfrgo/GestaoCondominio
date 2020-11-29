@@ -8,7 +8,6 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\bin\Debug\ne
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csprojAssemblyReference.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.AssemblyInfoInputs.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.AssemblyInfo.cs
-C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.csproj.CopyComplete
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.dll
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.DAL\obj\Debug\netcoreapp3.1\GestaoCondominios.DAL.pdb
