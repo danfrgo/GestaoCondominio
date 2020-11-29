@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using GestaoCondominios.BLL;
+using GestaoCondominios.BLL.Models;
 using GestaoCondominios.DAL;
+using GestaoCondominios.DAL.Interface;
+using GestaoCondominios.DAL.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +25,17 @@ namespace GestaoCondominios
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Contexto>(opcoes => opcoes.UseSqlServer(Configuration.GetConnectionString("ConexaoDB")));
+
+            services.AddIdentity<Utilizador, Funcao>().AddEntityFrameworkStores<Contexto>(); // configurar o Identity
+
+
+            // add middlewares
+            services.AddAuthentication();
+            services.AddAuthorization();
+
+            services.AddTransient<IUtilizadorRepositorio, UtilizadorRepositorio>(); // para utilizador o UtilizadorRepositorio
+
+
             services.AddControllersWithViews();
         }
 
@@ -46,7 +56,7 @@ namespace GestaoCondominios
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
