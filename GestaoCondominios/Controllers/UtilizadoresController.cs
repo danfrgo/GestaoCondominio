@@ -116,9 +116,66 @@ namespace GestaoCondominios.Controllers
            return View();
         }
 
-        public IActionResult Login()
+        [HttpGet]
+        public async Task<IActionResult> Login()
         {
+            if (User.Identity.IsAuthenticated)
+                await _utilizadorRepositorio.LogoutUtilizador();
             return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            //se os dados forem validos vou procurar pelo user
+            if (ModelState.IsValid)
+            {
+                Utilizador utilizador = await _utilizadorRepositorio.ObterUtilizadorPeloEmail(model.Email);
+
+                if(utilizador != null)
+                {
+
+                    if (utilizador.Status == StatusConta.Analisando)
+                    {
+                        return View("Analise", utilizador.UserName);
+                    }
+
+                    else if (utilizador.Status == StatusConta.Reprovado)
+                    {
+                        return View("Reprovado", utilizador.UserName);
+                    }
+
+                    else if (utilizador.PrimeiroAcesso == true)
+                    {
+                        return View("RedifinirPassword", utilizador);
+                    }
+
+                    else
+                    {
+                        PasswordHasher<Utilizador> passwordHasher = new PasswordHasher<Utilizador>();
+
+                        // verificar se a password digitada está correta
+                        if (passwordHasher.VerifyHashedPassword(utilizador, utilizador.PasswordHash, model.Password) != PasswordVerificationResult.Failed)
+                        {
+                            await _utilizadorRepositorio.LoginUtilizador(utilizador, false);
+                            return RedirectToAction("Index");
+
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Utilizador e/ou passwords são inválidos");
+                            return View(model);
+                        }
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Utilizador e/ou passwords são inválidos");
+                    return View(model);
+                }
+            }
+            return View(model);
         }
 
         public IActionResult Analise(string nome)

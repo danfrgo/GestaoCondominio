@@ -76,10 +76,30 @@ namespace GestaoCondominios.DAL.Repositorios
             }
 
         }
-
-        public Task LogoutUtilizador()
+        public async Task<Utilizador> ObterUtilizadorPeloEmail(string email)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _gestorUtilizadores.FindByEmailAsync(email);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public async Task LogoutUtilizador()
+        {
+            try
+            {
+                await _gestorLogin.SignOutAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public Task AtualizarUtilizador(Utilizador utilizador)
@@ -101,12 +121,7 @@ namespace GestaoCondominios.DAL.Repositorios
         public Task<IList<string>> ObterFuncoesUtilizador(Utilizador utilizador)
         {
             throw new NotImplementedException();
-        }
-
-        public Task<Utilizador> ObterUtilizadorPeloEmail(string email)
-        {
-            throw new NotImplementedException();
-        }
+        }  
 
         public Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId)
         {
