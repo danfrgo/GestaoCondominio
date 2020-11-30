@@ -102,9 +102,17 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
-        public Task AtualizarUtilizador(Utilizador utilizador)
+        public async Task AtualizarUtilizador (Utilizador utilizador)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _gestorUtilizadores.UpdateAsync(utilizador);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public string CodificarPassword(Utilizador utilizador, string password)
