@@ -115,40 +115,59 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
-        public string CodificarPassword(Utilizador utilizador, string password)
+        public async Task<bool> VerificarSeUtilizadorEstaEmFuncao(Utilizador utilizador, string funcao)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _gestorUtilizadores.IsInRoleAsync(utilizador, funcao);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        public async Task<IEnumerable<string>> ObterFuncoesUtilizador(Utilizador utilizador)
+        {
+            try
+            {
+                return await _gestorUtilizadores.GetRolesAsync(utilizador);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
-
-        public Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes)
+        public async Task<IdentityResult> RemoverFuncoesUtilizador(Utilizador utilizador, IEnumerable<string> funcoes)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _gestorUtilizadores.RemoveFromRolesAsync(utilizador, funcoes);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
-        public Task<IList<string>> ObterFuncoesUtilizador(Utilizador utilizador)
+        public async Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes)
         {
-            throw new NotImplementedException();
-        }  
+            try
+            {
+                return await _gestorUtilizadores.AddToRolesAsync(utilizador, funcoes);
+            }
+            catch (Exception ex)
+            {
 
-        public Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId)
-        {
-            throw new NotImplementedException();
+                throw ex;
+            }
         }
 
-        public Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador)
-        {
-            throw new NotImplementedException();
-        }
+       
 
-        public Task<IdentityResult> RemoverFuncoesUtilizador(Utilizador utilizador, IEnumerable<string> funcoes)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> VerificarSeUtilizadorEstaEmFuncao(Utilizador utilizador, string funcao)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

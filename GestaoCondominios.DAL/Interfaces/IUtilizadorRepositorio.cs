@@ -21,17 +21,17 @@ namespace GestaoCondominios.DAL.Interface
 
         Task AtualizarUtilizador(Utilizador utilizador);
 
-        Task<bool> VerificarSeUtilizadorEstaEmFuncao(Utilizador utilizador, string funcao);
+        Task<bool> VerificarSeUtilizadorEstaEmFuncao(Utilizador utilizador, string funcao); // vai verificar se o user ja esta registado em alguma funçao
 
-        Task<IList<string>> ObterFuncoesUtilizador(Utilizador utilizador);
+        Task<IEnumerable<string>> ObterFuncoesUtilizador(Utilizador utilizador); // retorna uma lista de strings com as funcoes do user
         Task<IdentityResult> RemoverFuncoesUtilizador(Utilizador utilizador, IEnumerable<string> funcoes);
 
         Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes);
 
-        Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador);
+        // Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador);
 
-        Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
+        // Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
 
-        string CodificarPassword(Utilizador utilizador, string password);
+        // string CodificarPassword(Utilizador utilizador, string password);
     }
 }
