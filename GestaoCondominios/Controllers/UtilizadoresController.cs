@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using GestaoCondominios.BLL;
 using GestaoCondominios.BLL.Models;
 using GestaoCondominios.DAL.Interface;
+using GestaoCondominios.DAL.Interfaces;
 using GestaoCondominios.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -18,11 +21,13 @@ namespace GestaoCondominios.Controllers
         //injeçao de dependencia
 
         private readonly IUtilizadorRepositorio _utilizadorRepositorio;
+        private readonly IFuncaoRepositorio _funcaoRepositorio;
         private readonly IWebHostEnvironment _webHostEnvironment;// para conseguir gravar a foto num diretorio
 
-        public UtilizadoresController(IUtilizadorRepositorio utilizadorRepositorio, IWebHostEnvironment webHostEnvironment)
+        public UtilizadoresController(IUtilizadorRepositorio utilizadorRepositorio, IFuncaoRepositorio funcaoRepositorio, IWebHostEnvironment webHostEnvironment)
         {
             _utilizadorRepositorio = utilizadorRepositorio;
+            _funcaoRepositorio = funcaoRepositorio;
             _webHostEnvironment = webHostEnvironment; // as imagens vao ficar no diretorio imagens
         }
 
@@ -213,6 +218,82 @@ namespace GestaoCondominios.Controllers
             return Json(true);
         }
 
+
+        // [Authorize(Roles = "Administrador")]
+        [HttpGet]
+        public async Task<IActionResult> GerirUtilizador(string utilizadorId, string nome)
+        {
+            if (utilizadorId == null)
+                return NotFound();
+
+            TempData["utilizadorId"] = utilizadorId; // para armazenar o ID do utilizador -> TempData é util para armazenar as informaçoes do controller e enviar para a view
+            ViewBag.Nome = nome; // para armazenar o nome e ser acedido pela view
+            Utilizador utilizador = await _utilizadorRepositorio.ObterPeloId(utilizadorId);
+
+            if (utilizador == null)
+                return NotFound();
+
+            List<FuncaoUtilizadorViewModel> viewModel = new List<FuncaoUtilizadorViewModel>();
+
+            foreach (Funcao funcao in await _funcaoRepositorio.ObterTodos())
+            {
+                FuncaoUtilizadorViewModel model = new FuncaoUtilizadorViewModel
+                {
+                    FuncaoId = funcao.Id,
+                    Nome = funcao.Name,
+                    Descricao = funcao.Descricao
+                };
+
+                if (await _utilizadorRepositorio.VerificarSeUtilizadorEstaEmFuncao(utilizador, funcao.Name))
+                {
+                    model.isSelecionado = true;
+                }
+
+                else
+                    model.isSelecionado = false;
+
+                    viewModel.Add(model); // model é a FuncaoUtilizadorViewModel
+            }
+
+            return View(viewModel);
+        }
+
+        //[Authorize(Roles = "Administrador")]
+        [HttpPost]
+        // 
+        public async Task<IActionResult> GerirUtilizador(List<FuncaoUtilizadorViewModel> model)
+        {
+            string utilizadorId = TempData["utilizadorId"].ToString();
+
+            Utilizador utilizador = await _utilizadorRepositorio.ObterPeloId(utilizadorId);
+
+            if (utilizador == null)
+                return NotFound();
+
+            IEnumerable<string> funcoes = await _utilizadorRepositorio.ObterFuncoesUtilizador(utilizador); // obter todas as funcoes do utilizador
+            IdentityResult resultado = await _utilizadorRepositorio.RemoverFuncoesUtilizador(utilizador, funcoes);
+
+            if (!resultado.Succeeded)
+            {
+                ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
+                // TempData["Excluir"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                return View("GerirUtilizador", utilizadorId);
+            }
+
+            resultado = await _utilizadorRepositorio.IncluirUtilizadorEmFuncoes(utilizador,
+                model.Where(x => x.isSelecionado == true).Select(x => x.Nome)); // passei uma lista de strings com os nomes selecionados
+
+            if (!resultado.Succeeded)
+            {
+                ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
+                // TempData["Excluir"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                return View("GerirUtilizador", utilizadorId);
+            }
+
+            // TempData["Atualizacao"] = $"As funções do utilizador {utilizador.UserName} foram atualizadas";
+            return RedirectToAction(nameof(Index));
+            
+        }
 
 
     }
