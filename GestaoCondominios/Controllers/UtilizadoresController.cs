@@ -103,7 +103,7 @@ namespace GestaoCondominios.Controllers
                 }
 
                 else
-                { // se nap for criado com sucesso, vou percorrer os erros orginados na criaçao do novo user
+                { // se nao for criado com sucesso, vou percorrer os erros orginados na criaçao do novo user
                     foreach (IdentityError erro in utilizadorCriado.Errors)
                     {
                         ModelState.AddModelError("", erro.Description);
@@ -176,6 +176,13 @@ namespace GestaoCondominios.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _utilizadorRepositorio.LogoutUtilizador();
+            return RedirectToAction("Login");
         }
 
         public IActionResult Analise(string nome)

@@ -63,6 +63,19 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
+        public async Task LogoutUtilizador()
+        {
+            try
+            {
+                await _gestorLogin.SignOutAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public int VerificarSeExisteRegisto()
         {
             try
@@ -81,19 +94,6 @@ namespace GestaoCondominios.DAL.Repositorios
             try
             {
                 return await _gestorUtilizadores.FindByEmailAsync(email);
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
-        public async Task LogoutUtilizador()
-        {
-            try
-            {
-                await _gestorLogin.SignOutAsync();
             }
             catch (Exception ex)
             {
