@@ -27,8 +27,7 @@ namespace GestaoCondominios.DAL.Interface
         Task<IdentityResult> RemoverFuncoesUtilizador(Utilizador utilizador, IEnumerable<string> funcoes);
 
         Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes);
-
-        // Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador);
+        Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador);
 
         // Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
 

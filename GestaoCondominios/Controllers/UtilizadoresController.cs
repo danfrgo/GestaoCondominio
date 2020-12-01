@@ -295,6 +295,13 @@ namespace GestaoCondominios.Controllers
             
         }
 
+        // [Authorize]
+        public async Task<IActionResult> MinhasInformacoes()
+        {
+            return View(await _utilizadorRepositorio.ObterUtilizadorPeloNome(User));
+        }
+
+
 
     }
 }

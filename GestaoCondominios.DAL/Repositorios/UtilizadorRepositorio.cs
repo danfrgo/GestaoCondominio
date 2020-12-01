@@ -166,8 +166,17 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
-       
+        public async Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador)
+        {
+            try
+            {
+                return await _gestorUtilizadores.FindByNameAsync(utilizador.Identity.Name);
+            }
+            catch (Exception ex)
+            {
 
-      
+                throw ex;
+            }
+        }
     }
 }
