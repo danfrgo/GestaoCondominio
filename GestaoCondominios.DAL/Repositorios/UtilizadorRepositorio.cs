@@ -191,5 +191,18 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
+
+        public string EncriptarPassword(Utilizador utilizador, string password)
+        {
+            try
+            {
+                return _gestorUtilizadores.PasswordHasher.HashPassword(utilizador, password);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

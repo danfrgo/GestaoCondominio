@@ -31,6 +31,6 @@ namespace GestaoCondominios.DAL.Interface
 
         Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
 
-        // string CodificarPassword(Utilizador utilizador, string password);
+        string EncriptarPassword(Utilizador utilizador, string password);
     }
 }

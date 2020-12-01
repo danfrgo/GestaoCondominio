@@ -73,7 +73,7 @@ namespace GestaoCondominios.Controllers
                     utilizador.Email = model.Email;
                     utilizador.PhoneNumber = model.Telefone;
                     utilizador.Foto = model.Foto;
-                    utilizador.PrimeiroAcesso = false; // se True = no primeiro login do user, ele terá que redifinir a password
+                    utilizador.PrimeiroAcesso = false; // se True = no primeiro login do user, ele terá que redefinir a password
                     utilizador.Status = StatusConta.Aprovado;
 
                     // obter o Status
@@ -153,7 +153,7 @@ namespace GestaoCondominios.Controllers
 
                     else if (utilizador.PrimeiroAcesso == true)
                     {
-                        return View("RedifinirPassword", utilizador);
+                        return RedirectToAction(nameof(RedefinirPassword), utilizador);
                     }
 
                     else
@@ -371,6 +371,37 @@ namespace GestaoCondominios.Controllers
             }
 
             return View(viewModel);
+        }
+
+        // [AllowAnonymous]
+        [HttpGet]
+        public IActionResult RedefinirPassword(Utilizador utilizador)
+        {
+            LoginViewModel model = new LoginViewModel
+            {
+                Email = utilizador.Email
+            };
+
+            return View(model);
+        }
+
+        // [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> RedefinirPassword(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Utilizador utilizador = await _utilizadorRepositorio.ObterUtilizadorPeloEmail(model.Email);
+                model.Password = _utilizadorRepositorio.EncriptarPassword(utilizador, model.Password);
+                utilizador.PasswordHash = model.Password;
+                utilizador.PrimeiroAcesso = false;
+                await _utilizadorRepositorio.AtualizarUtilizador(utilizador);
+                await _utilizadorRepositorio.LoginUtilizador(utilizador, false);
+
+                return RedirectToAction(nameof(MinhasInformacoes));
+            }
+
+            return View(model);
         }
 
     }
