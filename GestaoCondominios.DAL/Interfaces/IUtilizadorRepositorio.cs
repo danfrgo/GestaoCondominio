@@ -29,7 +29,7 @@ namespace GestaoCondominios.DAL.Interface
         Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes);
         Task<Utilizador> ObterUtilizadorPeloNome(ClaimsPrincipal utilizador);
 
-        // Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
+        Task<Utilizador> ObterUtilizadorPeloId(string utilizadorId);
 
         // string CodificarPassword(Utilizador utilizador, string password);
     }
