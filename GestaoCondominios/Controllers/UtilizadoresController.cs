@@ -276,7 +276,7 @@ namespace GestaoCondominios.Controllers
             if (!resultado.Succeeded)
             {
                 ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
-                // TempData["Excluir"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                // TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
                 return View("GerirUtilizador", utilizadorId);
             }
 
@@ -286,7 +286,7 @@ namespace GestaoCondominios.Controllers
             if (!resultado.Succeeded)
             {
                 ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
-                // TempData["Excluir"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                // TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
                 return View("GerirUtilizador", utilizadorId);
             }
 
