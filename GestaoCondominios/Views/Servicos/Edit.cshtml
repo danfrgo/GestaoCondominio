@@ -1,20 +1,21 @@
-﻿@model GestaoCondominios.BLL.Models.Evento
+﻿@model GestaoCondominios.BLL.Models.Servico
 
 @{
-    ViewData["Title"] = "Atualizar evento";
+    ViewData["Title"] = "Atualizar serviço " + Model.Nome;
 }
+
 
 <div class="formulario">
     <div class="collection with-header">
         <form asp-action="Edit">
             <div class="collection-header blue darken-3">
-                <h6 class="white-text">Atualizar evento</h6>
+                <h6 class="white-text">Atualizar serviço</h6>
             </div>
 
             <div class="collection-item">
                 <div asp-validation-summary="ModelOnly" class="red-text text-darken-4"></div>
 
-                <input type="hidden" asp-for="EventoId" />
+                <input type="hidden" asp-for="ServicoId" />
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -26,27 +27,19 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input asp-for="Data" type="text" class="validate" id="data" />
-                        <label asp-for="Data" id="data"></label>
-                        <span class="red-text text-darken-4" asp-validation-for="Data"></span>
+                        <input asp-for="Valor" class="validate" id="valor" />
+                        <label asp-for="Valor" id="valor"></label>
+                        <span class="red-text text-darken-4" asp-validation-for="Valor"></span>
                     </div>
-                </div>
+                </div>     
 
                 <input type="hidden" asp-for="UtilizadorId" />
             </div>
 
             <div class="collection-item">
                 <button type="submit" class="btn-small blue darken-3">Atualizar</button> &emsp;
-                <a asp-action="Index" asp-controller="Eventos">Voltar</a>
+                <a asp-action="Index" asp-controller="Servicos">Voltar</a>
             </div>
         </form>
     </div>
 </div>
-
-
-
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script src="~/js/InicializarDatepicker.js"></script>
-}

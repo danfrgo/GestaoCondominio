@@ -166,3 +166,6 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Index.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Create.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Eventos\Edit.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Servicos\Create.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Servicos\Edit.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Servicos\Index.cshtml.g.cs
