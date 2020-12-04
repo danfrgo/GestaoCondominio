@@ -74,7 +74,7 @@ namespace GestaoCondominios.Controllers
                     }
 
                     await _pagamentoRepositorio.Inserir(pagamentos); // save na BD
-                    TempData["NovoRegisto"] = $"O aluguer de valor {aluguer.Valor} do mês {aluguer.MesId} ano {aluguer.Ano} adicionado";
+                    TempData["NovoRegisto"] = $"O aluguer de valor {aluguer.Valor} € do mês {aluguer.MesId} ano {aluguer.Ano} adicionado";
                     return RedirectToAction(nameof(Index));
                 }
                 else
