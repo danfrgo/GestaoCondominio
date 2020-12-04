@@ -9,6 +9,6 @@ namespace GestaoCondominios.DAL.Interfaces
 {
     public interface IPagamentoRepositorio : IRepositorioGenerico<Pagamento>
     {
-        // Task<IEnumerable<Pagamento>> ObterPagamentoPorUtilizador(string utilizadorId);
+         Task<IEnumerable<Pagamento>> ObterPagamentoPorUtilizador(string utilizadorId); // O user vai ver apenas os seus pagamentos
     }
 }

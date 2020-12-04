@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCondominios", "GestaoCondominios\GestaoCondominios.csproj", "{C36E7ABE-0A54-4FDB-8749-296AF0638D7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoCondominios.BLL", "GestaoCondominios.BLL\GestaoCondominios.BLL.csproj", "{8285B69A-B3DB-4E2B-9F0A-87FD9C454E16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCondominios.BLL", "GestaoCondominios.BLL\GestaoCondominios.BLL.csproj", "{8285B69A-B3DB-4E2B-9F0A-87FD9C454E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoCondominios.DAL", "GestaoCondominios.DAL\GestaoCondominios.DAL.csproj", "{BAB93266-DA45-4BFD-9B06-580E8AF704A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoCondominios.DAL", "GestaoCondominios.DAL\GestaoCondominios.DAL.csproj", "{BAB93266-DA45-4BFD-9B06-580E8AF704A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

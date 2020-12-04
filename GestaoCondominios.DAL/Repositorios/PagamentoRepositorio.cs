@@ -17,13 +17,13 @@ namespace GestaoCondominios.DAL.Repositorios
         {
             _contexto = contexto;
         }
-        /*
+        
         public async Task<IEnumerable<Pagamento>> ObterPagamentoPorUtilizador(string utilizadorId)
         {
             try
             {
                 return await _contexto.Pagamentos.Include(p => p.Aluguer).ThenInclude(p => p.Mes)
-                    .Where(p => p.UtilizadorId == utilizadorId).ToListAsync();
+                    .Where(p => p.UtilizadorId == utilizadorId).ToListAsync(); // filtrar pelo ID do user
             }
             catch (Exception ex)
             {
@@ -31,6 +31,6 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
-        */
+        
     }
 }
