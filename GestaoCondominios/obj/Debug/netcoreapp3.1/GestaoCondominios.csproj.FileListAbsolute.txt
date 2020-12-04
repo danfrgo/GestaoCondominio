@@ -179,3 +179,4 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.dll
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.genruntimeconfig.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Pagamentos\Index.cshtml.g.cs
