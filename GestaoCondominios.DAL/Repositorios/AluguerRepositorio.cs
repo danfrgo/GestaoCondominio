@@ -1,4 +1,6 @@
 ﻿using GestaoCondominios.BLL.Models;
+using GestaoCondominios.DAL.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -42,11 +44,14 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
+        /*
         public async Task<IEnumerable<int>> ObterTodosAnos()
         {
             try
             {
-                return await _contexto.Alugueres.Select(a => a.Ano).Distinct().ToListAsync();
+                return await _contexto.Alugueres.Select(a => a.Ano)
+                    .Distinct()
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
@@ -54,5 +59,9 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
+
+        */
+
+     
     }
 }

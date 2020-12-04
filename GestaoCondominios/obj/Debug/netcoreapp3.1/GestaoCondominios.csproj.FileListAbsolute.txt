@@ -1,4 +1,3 @@
-C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.csprojAssemblyReference.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.AssemblyInfoInputs.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.AssemblyInfo.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.csproj.CoreCompileInputs.cache
@@ -129,9 +128,13 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\bin\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.dll
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\bin\Debug\netcoreapp3.1\GestaoCondominios.BLL.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\bin\Debug\netcoreapp3.1\GestaoCondominios.DAL.pdb
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.csprojAssemblyReference.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.TagHelpers.input.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.TagHelpers.output.cache
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.RazorCoreGenerate.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Alugueres\Create.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Alugueres\Edit.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Alugueres\Index.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Apartamentos\Create.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Apartamentos\Edit.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Apartamentos\Index.cshtml.g.cs

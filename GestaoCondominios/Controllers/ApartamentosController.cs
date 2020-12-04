@@ -35,7 +35,7 @@ namespace GestaoCondominios.Controllers
             Utilizador utilizador = await _utilizadorRepositorio.ObterUtilizadorPeloNome(User); // obter utilizador logado, o User -> contem todas as informaçoes do utilizador
 
             // se o user for Responsavel ele consegue ver todos os apartamentos registados
-            if (await _utilizadorRepositorio.VerificarSeUtilizadorEstaEmFuncao(utilizador, "Responsavel")) 
+            if (await _utilizadorRepositorio.VerificarSeUtilizadorEstaEmFuncao(utilizador, "Responsavel"))
             {
                 return View(await _apartamentoRepositorio.ObterTodos());
             }

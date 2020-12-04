@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace GestaoCondominios.DAL.Interfaces
 {
-    public interface IAluguerRepositorio : IRepositorioGenerico<Aluguer>
+    public interface IPagamentoRepositorio : IRepositorioGenerico<Pagamento>
     {
-        bool AluguerJaExiste(int mesId, int ano);
-
-        new Task<IEnumerable<Aluguer>> ObterTodos();
-
-        // Task<IEnumerable<int>> ObterTodosAnos();
+        // Task<IEnumerable<Pagamento>> ObterPagamentoPorUtilizador(string utilizadorId);
     }
 }
