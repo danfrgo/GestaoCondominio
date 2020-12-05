@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GestaoCondominios.DAL.Interfaces;
+using GestaoCondominios.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -38,18 +39,18 @@ namespace GestaoCondominios.Controllers
             return Json(_historicoRecursosRepositorio.ObterHistoricoDespesas(ano));
         }
 
-      /*  public async Task<JsonResult> DadosGraficoDespesasGanhosTotais()
+        public async Task<JsonResult> DadosGraficoDespesasGanhosTotais()
         {
             int ano = DateTime.Now.Year;
             GanhosDespesasViewModel model = new GanhosDespesasViewModel
             {
-                Despesas = await _historicoRecursosRepositorio.ObterSomaDespesas(ano),
-                Ganhos = await _historicoRecursosRepositorio.ObterSomaGanhos(ano)
+                Despesas = await _historicoRecursosRepositorio.ObterTotalDespesas(ano),
+                Ganhos = await _historicoRecursosRepositorio.ObterTotalGanhos(ano)
             };
 
             return Json(model);
 
         }
-      */
+     
     }
 }

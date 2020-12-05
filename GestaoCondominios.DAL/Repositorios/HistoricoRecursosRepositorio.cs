@@ -49,7 +49,7 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
-        public async Task<decimal> ObterSomaDespesas(int ano)
+        public async Task<decimal> ObterTotalDespesas(int ano)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace GestaoCondominios.DAL.Repositorios
             }
         }
 
-        public async Task<decimal> ObterSomaGanhos(int ano)
+        public async Task<decimal> ObterTotalGanhos(int ano)
         {
             try
             {
