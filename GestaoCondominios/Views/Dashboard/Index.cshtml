@@ -56,13 +56,13 @@
 
         @section Scripts {
             <script src="~/js/IniciarSelect.js"></script>
-            <script src="~/js/MetdosGraficos.js"></script>
-
+            <script src="~/js/Graficos.js"></script>
+            <script src="~/js/MetodosComuns.js"></script>
             <script>
                 CarregarDadosGanhosPorAno();
                 MontarGraficoDespesasGanhosTotais();
                 function CarregarDadosGanhosPorAno() {
-                    const ano = $("#ano").val();
+                    const ano = $("#ano").val(); // utilizar o valor selecionado nele
                     debugger;
                     MontarGraficoLinhasGanhos(ano);
                 }

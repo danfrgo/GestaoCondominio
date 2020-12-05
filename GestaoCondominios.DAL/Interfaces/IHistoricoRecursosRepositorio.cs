@@ -11,10 +11,11 @@ namespace GestaoCondominios.DAL.Interfaces
     {
         object ObterHistoricoGanhos(int ano);
         object ObterHistoricoDespesas(int ano);
-
+        /*
         public Task<decimal> ObterTotalDespesas(int ano);
         public Task<decimal> ObterTotalGanhos(int ano);
 
         public Task<IEnumerable<HistoricoRecursos>> ObterUltimasMovimentacoes();
+        */
     }
 }
