@@ -1,4 +1,4 @@
-﻿using GestaoCondominios.DAL.Interface;
+﻿using GestaoCondominios.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

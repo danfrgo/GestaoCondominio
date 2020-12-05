@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GestaoCondominios.BLL.Models;
-using GestaoCondominios.DAL.Interface;
 using GestaoCondominios.DAL.Interfaces;
 using GestaoCondominios.ViewModels;
 using Microsoft.AspNetCore.Mvc;

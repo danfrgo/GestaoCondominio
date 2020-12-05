@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using GestaoCondominios.BLL.Models
+@using GestaoCondominios.DAL.Interfaces
+
+@inject SignInManager<Utilizador> _gerirLogin
+@inject UserManager<Utilizador> _gerirUtilizadores
+@inject IUtilizadorRepositorio _utilizadorRepositorio
+
+@{
+    Utilizador utilizador = await _utilizadorRepositorio.ObterUtilizadorPeloNome(User);
+    IList<string> funcoes = await _utilizadorRepositorio.ObterFuncoesUtilizador(utilizador);
+}
+
+<!-- user estiver logado exibe infos -->
+@if (_gerirLogin.IsSignedIn(User))
+{
+    <ul>
+        <li>
+            <a class="nav-link" asp-controller="Utilizadores" asp-action="MinhasInformacoes"><span class="white-text">Olá, @utilizador.UserName</span></a>
+        </li>
+
+        <li>
+            <a class="nav-link white-text">@utilizador.Email</a>
+        </li>
+
+        <li>
+            @foreach (string funcao in funcoes)
+            {
+                <a class="nav-link white-text">@funcao</a>
+            }
+        </li>
+
+        <li>
+            <a class="nav-link white-text">Bem vindo ao Gestor de Condomínios</a>
+        </li>
+
+    </ul>
+}

@@ -1,5 +1,5 @@
 ﻿using GestaoCondominios.BLL.Models;
-using GestaoCondominios.DAL.Interface;
+using GestaoCondominios.DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;

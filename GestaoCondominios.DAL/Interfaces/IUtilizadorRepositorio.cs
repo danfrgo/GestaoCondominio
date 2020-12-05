@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoCondominios.DAL.Interface
+namespace GestaoCondominios.DAL.Interfaces
 {
     public interface IUtilizadorRepositorio: IRepositorioGenerico<Utilizador>
     {
@@ -23,7 +23,7 @@ namespace GestaoCondominios.DAL.Interface
 
         Task<bool> VerificarSeUtilizadorEstaEmFuncao(Utilizador utilizador, string funcao); // vai verificar se o user ja esta registado em alguma funçao
 
-        Task<IEnumerable<string>> ObterFuncoesUtilizador(Utilizador utilizador); // retorna uma lista de strings com as funcoes do user
+        Task<IList<string>> ObterFuncoesUtilizador(Utilizador utilizador); // retorna uma lista de strings com as funcoes do user
         Task<IdentityResult> RemoverFuncoesUtilizador(Utilizador utilizador, IEnumerable<string> funcoes);
 
         Task<IdentityResult> IncluirUtilizadorEmFuncoes(Utilizador utilizador, IEnumerable<string> funcoes);

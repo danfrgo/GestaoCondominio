@@ -1,5 +1,5 @@
 ﻿using GestaoCondominios.BLL.Models;
-using GestaoCondominios.DAL.Interface;
+using GestaoCondominios.DAL.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -127,7 +127,7 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
-        public async Task<IEnumerable<string>> ObterFuncoesUtilizador(Utilizador utilizador)
+        public async Task<IList<string>> ObterFuncoesUtilizador(Utilizador utilizador)
         {
             try
             {

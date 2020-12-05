@@ -1,5 +1,4 @@
-﻿using GestaoCondominios.DAL.Interface;
-using GestaoCondominios.DAL.Interfaces;
+﻿using GestaoCondominios.DAL.Interfaces;
 using GestaoCondominios.DAL.Repositorios;
 using Microsoft.Extensions.DependencyInjection;
 using System;

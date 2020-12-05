@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoCondominios.DAL.Interface
+namespace GestaoCondominios.DAL.Interfaces
 {
     public interface IRepositorioGenerico<TEntity> where TEntity: class
     {
