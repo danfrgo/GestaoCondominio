@@ -43,8 +43,6 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
-
-        /*
         public async Task<IEnumerable<int>> ObterTodosAnos()
         {
             try
@@ -59,8 +57,6 @@ namespace GestaoCondominios.DAL.Repositorios
                 throw ex;
             }
         }
-
-        */
 
      
     }

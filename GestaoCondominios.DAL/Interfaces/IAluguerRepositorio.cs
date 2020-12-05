@@ -13,6 +13,6 @@ namespace GestaoCondominios.DAL.Interfaces
 
         new Task<IEnumerable<Aluguer>> ObterTodos();
 
-        // Task<IEnumerable<int>> ObterTodosAnos();
+        Task<IEnumerable<int>> ObterTodosAnos();
     }
 }

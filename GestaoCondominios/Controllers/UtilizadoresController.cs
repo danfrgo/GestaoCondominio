@@ -259,7 +259,6 @@ namespace GestaoCondominios.Controllers
 
         //[Authorize(Roles = "Administrador")]
         [HttpPost]
-        // 
         public async Task<IActionResult> GerirUtilizador(List<FuncaoUtilizadorViewModel> model)
         {
             string utilizadorId = TempData["utilizadorId"].ToString();
@@ -275,7 +274,7 @@ namespace GestaoCondominios.Controllers
             if (!resultado.Succeeded)
             {
                 ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
-                // TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
                 return View("GerirUtilizador", utilizadorId);
             }
 
@@ -285,11 +284,11 @@ namespace GestaoCondominios.Controllers
             if (!resultado.Succeeded)
             {
                 ModelState.AddModelError("", "Não foi possível atualizar as funções do utilizador");
-                // TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
+                TempData["Exclusao"] = $"Não foi possível atualizar as funções do utilizador {utilizador.UserName}";
                 return View("GerirUtilizador", utilizadorId);
             }
 
-            // TempData["Atualizacao"] = $"As funções do utilizador {utilizador.UserName} foram atualizadas";
+            TempData["Atualizacao"] = $"As funções do utilizador {utilizador.UserName} foram atualizadas";
             return RedirectToAction(nameof(Index));
             
         }

@@ -9,3 +9,4 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\ne
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.dll
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.genruntimeconfig.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios.BLL\obj\Debug\netcoreapp3.1\GestaoCondominios.BLL.csprojAssemblyReference.cache

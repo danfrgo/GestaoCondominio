@@ -182,3 +182,7 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.dll
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.pdb
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\GestaoCondominios.genruntimeconfig.cache
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BoasVindas.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\_GraficoDespesasGanhosTotais.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\_GraficoValoresGanhosDespesas.cshtml.g.cs
