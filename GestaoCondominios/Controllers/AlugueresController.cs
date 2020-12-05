@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GestaoCondominios.Controllers
 {
-    // [Authorize(Roles = "Administrador,Sindico")]
+    [Authorize(Roles = "Administrador,Responsavel")]
     public class AlugueresController : Controller
     {
 

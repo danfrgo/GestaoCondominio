@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace GestaoCondominios.Controllers
 {
 
-    // [Authorize]
+    [Authorize]
     public class EventosController : Controller
     {
         private readonly IEventoRepositorio _eventoRepositorio;

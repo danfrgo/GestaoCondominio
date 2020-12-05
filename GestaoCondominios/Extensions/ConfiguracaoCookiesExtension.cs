@@ -16,7 +16,7 @@ namespace GestaoCondominios.Extensions
                 opcoes.Cookie.HttpOnly = true;
                 opcoes.ExpireTimeSpan = TimeSpan.FromMinutes(60); // expira em 60 minutos
                 opcoes.LoginPath = "/Utilizadores/Login";
-                opcoes.AccessDeniedPath = "/Utilizadores/AcessoNegado";
+                opcoes.AccessDeniedPath = "/Utilizadores/AcessoNaoAutorizado";
             });
         }
     }

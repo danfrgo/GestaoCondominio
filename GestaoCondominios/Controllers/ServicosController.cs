@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using GestaoCondominios.BLL.Models;
 using GestaoCondominios.DAL.Interfaces;
 using GestaoCondominios.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace GestaoCondominios.Controllers
 {
-   
+    [Authorize]
     public class ServicosController : Controller
     {
         private readonly IServicoRepositorio _servicoRepositorio;
@@ -106,7 +107,7 @@ namespace GestaoCondominios.Controllers
             return Json("Serviço excluído");
         }
 
-        //[Authorize(Roles = "Administrador,Sindico")]
+        [Authorize(Roles = "Administrador,Responsavel")]
         [HttpGet]
         public async Task<IActionResult> AprovarServico(int id)
         {
@@ -120,8 +121,8 @@ namespace GestaoCondominios.Controllers
             return View(viewModel);
         }
 
-      
-        // [Authorize(Roles = "Administrador,Sindico")]
+
+        [Authorize(Roles = "Administrador,Responsavel")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AprovarServico(ServicoAprovadoViewModel viewModel)
@@ -158,7 +159,7 @@ namespace GestaoCondominios.Controllers
             return View(viewModel);
         }
 
-        // [Authorize(Roles = "Administrador,Responsavel")]
+        [Authorize(Roles = "Administrador,Responsavel")]
         public async Task<IActionResult> RecusarServico(int id)
         {
             Servico servico = await _servicoRepositorio.ObterPeloId(id);

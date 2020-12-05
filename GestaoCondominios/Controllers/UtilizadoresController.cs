@@ -30,18 +30,20 @@ namespace GestaoCondominios.Controllers
             _webHostEnvironment = webHostEnvironment; // as imagens vao ficar no diretorio imagens
         }
 
-
+        [Authorize(Roles = "Administrador,Responsavel")]
         public async Task<IActionResult> Index()
         {
             return  View(await _utilizadorRepositorio.ObterTodos());
         }
 
+        [AllowAnonymous] // nao precisa de login para executar a funcao
         [HttpGet]
         public IActionResult Registo()
         {
             return View();
         }
 
+        [AllowAnonymous] // nao precisa de login para executar a funcao
         [ValidateAntiForgeryToken] // para evitar que se falsifique o envio de dados para o servidor
         [HttpPost]
         public async Task<IActionResult> Registo(RegistoViewModel model, IFormFile foto) // IFormFile para gravar a foto num directorio
@@ -120,6 +122,7 @@ namespace GestaoCondominios.Controllers
            return View();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> Login()
         {
@@ -128,6 +131,7 @@ namespace GestaoCondominios.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -163,6 +167,9 @@ namespace GestaoCondominios.Controllers
                         if (passwordHasher.VerifyHashedPassword(utilizador, utilizador.PasswordHash, model.Password) != PasswordVerificationResult.Failed)
                         {
                             await _utilizadorRepositorio.LoginUtilizador(utilizador, false);
+                            if (await _utilizadorRepositorio.VerificarSeUtilizadorEstaEmFuncao(utilizador, "Morador"))
+                                return RedirectToAction(nameof(MinhasInformacoes));
+                            else 
                             return RedirectToAction("Index");
 
                         }
@@ -182,6 +189,7 @@ namespace GestaoCondominios.Controllers
             return View(model);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
@@ -198,6 +206,13 @@ namespace GestaoCondominios.Controllers
         {
             return View(nome);
         }
+
+        public IActionResult AcessoNaoAutorizado()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Administrador,Responsavel")]
         public async Task<JsonResult> AprovarUtilizador(string utilizadorId)
         {
             Utilizador utilizador = await _utilizadorRepositorio.ObterPeloId(utilizadorId);
@@ -208,6 +223,7 @@ namespace GestaoCondominios.Controllers
             return Json(true);
         }
 
+        [Authorize(Roles = "Administrador,Responsavel")]
         public async Task<JsonResult> ReprovarUtilizador(string utilizadorId)
         {
             Utilizador utilizador = await _utilizadorRepositorio.ObterPeloId(utilizadorId);
@@ -218,7 +234,7 @@ namespace GestaoCondominios.Controllers
         }
 
 
-        // [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<IActionResult> GerirUtilizador(string utilizadorId, string nome)
         {
@@ -257,7 +273,7 @@ namespace GestaoCondominios.Controllers
             return View(viewModel);
         }
 
-        //[Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<IActionResult> GerirUtilizador(List<FuncaoUtilizadorViewModel> model)
         {
@@ -293,13 +309,13 @@ namespace GestaoCondominios.Controllers
             
         }
 
-        // [Authorize]
+        [Authorize]
         public async Task<IActionResult> MinhasInformacoes()
         {
             return View(await _utilizadorRepositorio.ObterUtilizadorPeloNome(User));
         }
 
-        // [Authorize]
+         [Authorize]
         [HttpGet]
         // atualizar user por ID
         public async Task<IActionResult> Atualizar(string id)
@@ -324,7 +340,7 @@ namespace GestaoCondominios.Controllers
             return View(model);
         }
 
-        // [Authorize]
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Atualizar(AtualizarViewModel viewModel, IFormFile foto)
@@ -371,7 +387,7 @@ namespace GestaoCondominios.Controllers
             return View(viewModel);
         }
 
-        // [AllowAnonymous]
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult RedefinirPassword(Utilizador utilizador)
         {
@@ -383,7 +399,7 @@ namespace GestaoCondominios.Controllers
             return View(model);
         }
 
-        // [AllowAnonymous]
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> RedefinirPassword(LoginViewModel model)
         {

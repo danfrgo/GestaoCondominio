@@ -144,8 +144,6 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Funcoes\Create.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Funcoes\Edit.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Funcoes\Index.cshtml.g.cs
-C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Pagamentos\Index.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Servicos\AprovarServico.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Servicos\Create.cshtml.g.cs
@@ -187,3 +185,4 @@ C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcor
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\_GraficoDespesasGanhosTotais.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\_GraficoValoresGanhosDespesas.cshtml.g.cs
 C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\UltimasMovimentacoes\Default.cshtml.g.cs
+C:\Users\Danie\source\repos\GestaoCondominios\GestaoCondominios\obj\Debug\netcoreapp3.1\Razor\Views\Utilizadores\AcessoNaoAutorizado.cshtml.g.cs

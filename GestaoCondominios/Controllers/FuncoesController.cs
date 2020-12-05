@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GestaoCondominios.Controllers
 {
-    // [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador")]
     public class FuncoesController : Controller
     {
         private readonly IFuncaoRepositorio _funcaoRepositorio;

@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GestaoCondominios.Controllers
 {
-    // [Authorize(Roles = "Administrador,Sindico")]
+    [Authorize(Roles = "Administrador,Sindico")]
     public class ApartamentosController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment; // pois o apartamento possui imagens

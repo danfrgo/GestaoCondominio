@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GestaoCondominios.Controllers
 {
-    //[Authorize(Roles = "Administrador,Responsavel")]
+    [Authorize(Roles = "Administrador,Responsavel")]
     public class DashboardController : Controller
     {
         private readonly IAluguerRepositorio _aluguerRepositorio;

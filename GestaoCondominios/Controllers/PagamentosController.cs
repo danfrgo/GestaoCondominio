@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GestaoCondominios.Controllers
 {
-    // [Authorize]
+    [Authorize]
     public class PagamentosController : Controller
     {
         private readonly IPagamentoRepositorio _pagamentoRepositorio;
