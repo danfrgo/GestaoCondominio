@@ -84,7 +84,7 @@ namespace GestaoCondominios.DAL.Repositorios
             try
             {
                 return await _contexto.HistoricoRecursos.Include(hr => hr.Mes).OrderByDescending(hr => hr.HistoricoRecursosId)
-                    .Take(5).ToListAsync();
+                    .Take(5).ToListAsync(); // obter os ultimos 5 registos
             }
             catch (Exception ex)
             {
